@@ -13,5 +13,5 @@
 
 # Introduction
 
-This repository consist files regarding to my portfolio webside which was created together with Jakub Kulczynski ( https://github.com/thePariti ). Jakub is frontend developer.
+test 1 This repository consist files regarding to my portfolio webside which was created together with Jakub Kulczynski ( https://github.com/thePariti ). Jakub is frontend developer.
 
