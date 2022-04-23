@@ -13,8 +13,10 @@
 
 # Introduction
 
-test 1 This repository consist files regarding to my portfolio webside which was created together with Jakub Kulczynski ( https://github.com/thePariti ). Jakub is frontend developer.
-test 2 
+# Links
 
-- HTTP Crash Course & Exploration
-    - https://www.youtube.com/watch?v=iYM2zFP3Zn0
+- Medium:
+    - https://medium.com/me/stories/public
+
+- OpenSea:
+    - https://opensea.io/Mikolaj_
