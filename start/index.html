@@ -7,9 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,700|Saira:300,400&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
+  <nav>
+    <a class="cv1"  href="#">CV</a>
+    <a class="articles1" href="#">Artykuły</a>
+    <a class="book1" href="#">Book</a>
+    <a class="hobby1" href="#">Konferecje</a>
+    <a class="contact1" href="#">Kontakt</a>
+   </nav>
   <header>
     <div class="welcome">
       <p>hello!</p>
@@ -19,7 +27,7 @@
     <img src="images/mikolaj.png.png" alt="Zdjęcie Mikołaj Maślanka">
   </header>
 </section>
-<section class="cv">
+<section data-section="cv1" id="cv1" class="cv">
   <h1>Curriculum Viate</h1>
   <div class="cvdiv clearfix">
     <div class="imagecv">
@@ -35,7 +43,7 @@
 
 </section>
 
-  <section class="articles clearfix">
+  <section data-section="articles1" id="articles1" class="articles clearfix">
     <h1>jestem autorem/współałtorem, takich artykułów jak</h1>
     <div class="article">
       <img src="images/artykul1.jpg" alt="Artykuł 1">
@@ -55,7 +63,7 @@
   </section>
 </section>
 
-<section class="book">
+<section data-section="book1" id="book1" class="book">
   <h1>recenzje książek</h1>
   <div class="project clearfix">
     <div class="web">
@@ -95,7 +103,7 @@
   </div>
 </section>
 
-  <section class="hobby clearfix">
+  <section data-section="hobby1" id="hobby1" class="hobby clearfix">
     <h1>polecane konferencje</h1>
     <div class="item">
       <a href="https://dssconf.pl/" target="_blank"> <p> 1</p> </a>
@@ -111,7 +119,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section data-section="contact1" id="contact1" class="contact">
     <h1>Skontaktuj się ze mną</h1>
     <div class="wrap clearfix">
 
@@ -129,6 +137,12 @@
   </section>
 
   <footer>&copy; Mikołaj Maślanka – portfilo website</footer>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="script/sc.js"></script>
+
 </body>
 
 </html>
