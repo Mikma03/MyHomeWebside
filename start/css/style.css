@@ -16,30 +16,57 @@ sans-serif;
   display: block;
   clear: both;
 }
+
+/* burger */
+.burger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
+  line-height: 50px;
+  transition: .3s linear;
+  z-index: 2;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.fa-solid {
+  display: none;
+  color: gray;
+}
+
+i.show {
+  display: block;
+}
+
+
 /* nav */
-nav {
-  display: flex;
-  padding: 20px;
-  height: 10vh;
-  /* position: fixed;
+
+aside {
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white; */
- }
+  bottom: 0;
+  right: -250px;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: .3s linear;
+  z-index: 1;
+  overflow: hidden;
+}
 
- nav a {
-  flex-grow: 1;
-  font-family: arial;
-  font-size: 30px;
-  text-align: center;
-  color: black;
-  text-decoration: none;
- }
-
- nav a:hover {
+aside.show {
+  right: 0;
+}
+aside a{
+font-size: 36px;
+font-family: 'Saira';
+text-decoration: none;
+}
+aside a:hover{
   text-decoration: underline;
- }
+}
 
 
 /* walcom */
