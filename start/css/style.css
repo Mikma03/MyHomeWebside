@@ -61,8 +61,6 @@ aside.show {
 }
 aside a{
   margin: 20px;
-  width: 100%;
-  box-sizing: border-box;
   text-decoration: none;
   color: white;
   font-size: 32px;
@@ -106,6 +104,7 @@ header div.welcome {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  z-index: 0;
 }
 
 
@@ -288,7 +287,8 @@ header h2 {
 
 .articles {
   max-width: 1600px;
-  margin: 50px auto 0;
+  height: 100%;
+  margin: 15px auto 0;
   padding: 5%;
   text-align: center;
 
@@ -319,12 +319,17 @@ header h2 {
 }
 
 .articles img {
-  width: 100%;
   margin: 5px 0;
   max-width: 375px;
+  width: 100px;
+  height: 100px;
 }
 
+
 @media (min-width:360px) {
+  /* .articles {
+    height: 100px;
+  } */
   .articles h1 {
     font-size: 28px;
   }
@@ -335,9 +340,17 @@ header h2 {
   .articles p {
     font-size: 14px;
   }
+  .article img {
+    width: 100px;
+    height: 100px;
+      }
 }
 
 @media (min-width:768px) {
+  .article {
+    width: 200px;
+    height: 100%;
+  }
   .articles h1 {
     font-size: 36px;
   }
@@ -348,14 +361,18 @@ header h2 {
   .articles p {
     font-size: 18px;
   }
+  .article img {
+    width: 200px;
+    height: 200px;
+      }
 }
 
 @media (min-width:1024px) {
   .articles {
+    height: 600px;
     margin-top: 50px;
     padding: 5% 2%;
     text-align: center;
-
   }
   .article {
     float: left;
@@ -374,19 +391,26 @@ header h2 {
     line-height: 120%;
     padding: 0 10px;
   }
+  .article img {
+    width: 300px;
+    height: 300px;
+      }
+
 }
 
 @media (min-width:1600px) {
-
-
-  .article {
-
+  .articles {
+    margin: auto;
     padding: 20px 50px;
+    width: 100vw;
+  }
+  .article{
+    width: 300px;
+    margin-left: 17%;
   }
   .articles h1 {
     font-size: 60px;
   }
-
   .articles h2 {
     font-size: 32px;
   }
@@ -394,6 +418,14 @@ header h2 {
     font-size: 21px;
     line-height: 140%;
     padding: 0 10px;
+    text-align: center;
+  }
+  .article img {
+    width: 300px;
+    height: 300px;
+  }
+  .description{
+    width: 300px;
   }
 }
 /* sekcja cv */
@@ -605,14 +637,35 @@ header h2 {
   max-width: 1400px;
   margin: 0 auto 20px;
 }
+.book .project{
+  background-color: #176FA6;
+}
+.book a{
+  text-decoration: none;
+}
+.button {
+  background-color: #176FA6;;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-family: 'Saira',
+}
 
-.book .project:nth-of-type(odd) {
+/* rozne kolory book */
+
+/* .book .project:nth-of-type(odd) {
   background-color: #176FA6;
 }
 
 .book .project:nth-of-type(even) {
   background-color: #05C7F2;
-}
+} */
   /* #05C7F2 */
   /* #010326 */
   /* #031059 */
@@ -651,10 +704,11 @@ header h2 {
     display: block;
   }
 
-  .book .project:nth-of-type(even) .web {
-    float: right;
+  /* img do book z prawei i lewej strony */
 
-  }
+  /* .book .project:nth-of-type(even) .web {
+    float: right;
+  } */
   .book .project:nth-of-type(even) .about {
     padding-right: 0;
   }
@@ -714,36 +768,32 @@ header h2 {
 }
 
 .hobby .item:nth-of-type(1) {
-  background-image: url(../images/ddslogo.png);
+  background-image: url(../images/hajs.jpg);
 }
 
 .hobby .item:nth-of-type(2) {
-  background-image: url(../images/Warszawskie_Dni_Informatyki_-_logotyp.png);
+  background-image: url(../images/piwo.jpg);
 }
 
 .hobby .item:nth-of-type(3) {
-  background-image: url(../images/thehacksummit.png);
+  background-image: url(../images/samochod.jpg);
 }
 
 .hobby .item:nth-of-type(4) {
   background-image: url(../images/pizza.jpg);
 }
 
-.hobby .item a{
-  text-decoration: none;
-}
 
 .hobby .item p {
-  /* font-family: 'saira', sans-serif;
+  font-family: 'saira', sans-serif;
   color: white;
   text-align: center;
-  line-height: 25vh;
+  /*  line-height: 25vh;*/
   text-shadow: 0 0 4px black;
-  background-color: rgba(0, 0, 0, .05); */
-  font-size: 0px;
-  /* padding: 5px 0; */
+  background-color: rgba(0, 0, 0, .5);
+  font-size: 20px;
+  padding: 5px 0;
 }
-
 
 .hobby h1 {
   font-family: 'saira condensed', sans-serif;
@@ -758,7 +808,6 @@ header h2 {
     float: left;
     width: 50%;
     height: 40vh;
-    background-size: cover;
   }
 }
 
@@ -771,14 +820,14 @@ header h2 {
 
   }
 
-  .hobby .item a {
+  .hobby .item p {
     font-size: 30px;
     padding: 15px 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .hobby .item a {
+  .hobby .item p {
     padding: 0;
     line-height: 40vh;
     opacity: 0;
@@ -786,10 +835,8 @@ header h2 {
     cursor: default;
   }
 
-  .hobby .item:hover a {
+  .hobby .item:hover p {
     opacity: 1;
-    background-color: rgba(0, 0, 0, .05);
-    transition: 1s;
   }
 
   .hobby .item {
@@ -810,8 +857,11 @@ header h2 {
     margin-bottom: 45px;
 
   }
-}
 
+  .hobby .item p {
+    font-size: 40px;
+  }
+}
 
 /* sekcja contact */
 
@@ -830,7 +880,7 @@ header h2 {
   sans-serif;
   font-size: 26px;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: white;
   text-align: center;
 }
@@ -841,33 +891,6 @@ header h2 {
   margin: 0 auto;
 }
 
-.contact input,
-.contact button,
-.contact textarea {
-  width: 100%;
-  margin-bottom: 25px;
-  font-family: saira, sans-serif;
-  font-size: 12px;
-  padding: 5px;
-}
-
-.contact input {
-
-  height: 36px;
-
-}
-
-.contact textarea {
-  height: 120px
-}
-
-.contact button {
-  font-size: 14px;
-  line-height: 40px;
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-}
 
 .contact .socials {
   padding-top: 30px;
@@ -882,74 +905,28 @@ header h2 {
 
 }
 
-.contact .social img {
-  float: left;
-
-}
-
-.contact .social span {
-  line-height: 72px;
-  padding-left: 20px;
-  float: left;
-  font-size: 20px;
-}
-
-@media (min-width: 533px) {
-  .contact .social {
-    display: inline-block;
-    width: 50%;
-  }
-}
-
 @media (min-width: 1024px) {
 
   .contact h1 {
     font-size: 60px;
-    padding: 30px 0;
+    padding: 20px 0;
   }
   .contact form,
   .contact .socials {
-    float: left;
-    width: 50%;
+    width: 120%;
     padding: 0 20px
   }
 
+
   .contact .social {
-    display: block;
-    width: 50%;
+    display: inline-block;
+    width: 20%;
     margin: 0 auto;
   }
 
-  .contact input,
-  .contact button,
-  .contact textarea {
-    margin-bottom: 35px;
-
-  }
-  .contact input {
-
-    height: 46px;
-    font-size: 24px;
-
-  }
-
-  .contact textarea {
-    height: 180px;
-    font-size: 24px;
-  }
-
-  .contact button {
-    font-size: 20px;
-    line-height: 50px;
-    transition: .3s;
-    cursor: pointer;
-
-  }
-  .contact button:hover {
-    color: black;
-    background-color: #fff;
-  }
 }
+/* stopka */
+
 footer {
   background-color: #05C7F2;
       /* #05C7F2 */

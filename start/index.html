@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:400,700|Saira:300,400&amp;subset=latin-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="splide/dist/css/splide.min.css">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -20,6 +21,7 @@
   <aside>
     <nav>
       <ul>
+        <li><a class="welcom1"  href="#">Me</a></li>
         <li><a class="cv1"  href="#">CV</a></li>
         <li><a class="articles1" href="#">Artykuły</a></li>
         <li><a class="book1" href="#">Book</a></li>
@@ -30,7 +32,7 @@
   </aside>
 
   <header>
-    <div class="welcome">
+    <div id="welcom1" data-section="welcom1" class="welcome">
       <p>hello!</p>
       <h1>mikołaj maślanka</h1>
       <h2>Curious, highly motivated, achievement-oriented, cooperative, with outstanding communication skills, easily adapting to new circumstances. Interested in problem-solving tasks, developing skills regarding data analytics, statistical modeling, and programming. Experience in Finance and Investment Funds Industry gained at top institutions. Core competencies include Data visualization, Advanced mathematics, Derivatives pricing models, Machine Learning, Risk management, Financial markets, Databases, and Software Development. Currently, I prepare myself for the first level of the Investment Advisor exam and the first level of the FRM exam.</h2>
@@ -56,21 +58,45 @@
 
   <section data-section="articles1" id="articles1" class="articles clearfix">
     <h1>jestem autorem/współałtorem, takich artykułów jak</h1>
-    <div class="article">
-      <img src="images/artykul1.jpg" alt="Artykuł 1">
-      <h2>artykuł 1</h2>
-      <p class="description">coś o artykule 1</p>
-    </div>
-    <div class="article">
-      <img src="images/artykul2.jpg" alt="Artykuł 2">
-      <h2>artykuł 2</h2>
-      <p class="description">coś o artykule 2</p>
-    </div>
-    <div class="article">
-      <img src="images/artykul3.jpg" alt="Artykuł 3">
-      <h2>artykuł 3</h2>
-      <p class="description">coś o artykule 3</p>
-    </div>
+    <section class="splide" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="article">
+            <img src="images/artykul1.jpg" alt="Artykuł 1">
+            <h2>artykuł 1</h2>
+            <p class="description">coś o artykule 1</p>
+          </div></li>
+          <li class="splide__slide">    <div class="article">
+            <img src="images/artykul2.jpg" alt="Artykuł 2">
+            <h2>artykuł 2</h2>
+            <p class="description">coś o artykule 2</p>
+          </div></li>
+          <li class="splide__slide"> <div class="article">
+            <img src="images/artykul3.jpg" alt="Artykuł 3">
+            <h2>artykuł 3</h2>
+            <p class="description">coś o artykule 3</p>
+          </div></li>
+          <li class="splide__slide">
+            <div class="article">
+            <img src="images/piwo.jpg" alt="Artykuł 1">
+            <h2>artykuł 1</h2>
+            <p class="description">coś o artykule 1</p>
+          </div></li>
+          <li class="splide__slide">    <div class="article">
+            <img src="images/samochod.jpg" alt="Artykuł 2">
+            <h2>artykuł 2</h2>
+            <p class="description">coś o artykule 2</p>
+          </div></li>
+          <li class="splide__slide"> <div class="article">
+            <img src="images/hajs.jpg" alt="Artykuł 3">
+            <h2>artykuł 3</h2>
+            <p class="description">coś o artykule 3</p>
+          </div>
+        </li>
+        </ul>
+      </div>
+    </section>
   </section>
 </section>
 
@@ -82,7 +108,7 @@
     </div>
     <div class="about">
       <h2>Book 1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui velit corrupti consequatur nihil est.</p>
+      <p>Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test Test test test test test test test test test test test test.</p>
     </div>
   </div>
   <div class="project clearfix">
@@ -103,17 +129,72 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui velit corrupti consequatur nihil est.</p>
     </div>
   </div>
+  <a href="book.html" target="_blank"> <button class="button">Read more</button></a>
+
+
+  <!-- <button class="button">Read more<a class="social clearfix" href="book.html" target="_blank"> </a></button> -->
+</section>
+
+
+
+
+<section data-section="hobby1" id="hobby1" class="book">
+  <h1>polecane konferencje</h1>
   <div class="project clearfix">
     <div class="web">
-      <img src="images/pizza.jpg" alt="book">
+      <a href="https://warszawskiedniinformatyki.pl" target="_blank"><img src="images/Warszawskie_Dni_Informatyki_-_logotyp.png" alt="tekst alternatywny"  /></a>
     </div>
     <div class="about">
-      <h2>Book4</h2>
+      <h2>Konf 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui velit corrupti consequatur nihil est.</p>
+    </div>
+  </div>
+  <div class="project clearfix">
+    <div class="web">
+      <a href="https://thehacksummit.com/" target="_blank"><img src="images/thehacksummit.png" alt="tekst alternatywny"  /></a>
+    </div>
+    <div class="about">
+      <h2>Konf 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui velit corrupti consequatur nihil est.</p>
+    </div>
+  </div>
+  <div class="project clearfix">
+    <div class="web">
+      <a href="https://ml.dssconf.pl/" target="_blank"><img src="images/piwo.jpg" alt="tekst alternatywny"  /></a>
+    </div>
+    <div class="about">
+      <h2>Konf 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui velit corrupti consequatur nihil est.</p>
+    </div>
+  </div>
+  <div class="project clearfix">
+    <div class="web">
+      <a href="https://dssconf.pl/" target="_blank"><img src="images/ddslogo.png" alt="tekst alternatywny"  /></a>
+    </div>
+    <div class="about">
+      <h2>Konf 4</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque quidem illo doloribus ipsa, facere, quae eligendi debitis. A debitis totam amet aperiam enim. Qui velit corrupti consequatur nihil est.</p>
     </div>
   </div>
 </section>
 
+<section class="hobby clearfix">
+  <h1>W wolnym czasie uwielbiam</h1>
+  <div class="item">
+    <p>Hajs</p>
+  </div>
+  <div class="item">
+    <p>Piwo</p>
+  </div>
+  <div class="item">
+    <p>Samochody</p>
+  </div>
+  <div class="item">
+    <p>Pizza</p>
+  </div>
+</section>
+  
+<!-- hobby do ponownego przerobienai na hobby
   <section data-section="hobby1" id="hobby1" class="hobby clearfix">
     <h1>polecane konferencje</h1>
     <div class="item">
@@ -128,7 +209,8 @@
     <div class="item">
       <a href="https://ml.dssconf.pl/" target="_blank"> <p> 1</p> </a>
     </div>
-  </section>
+  </section> -->
+
 
   <section data-section="contact1" id="contact1" class="contact">
     <h1>Skontaktuj się ze mną</h1>
@@ -148,6 +230,7 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <script src="splide/dist/js/splide.min.js"></script>
   <script src="script/sc.js"></script>
 
 </body>
